@@ -1,0 +1,15 @@
+@startuml
+salt
+{
+  003a | <b> Account var#3
+  003b | {Lorem ipsum dolor sit amet,
+          consectetuer adipiscing elit.
+          Curabitur sagittis hendrerit
+          ante. Lorem ipsum dolor sit
+          amet, consectetuer adipiscing
+          elit. Integer imperdiet lectus
+          quis justo.
+        }
+  003c | [Select this variant]
+}
+@enduml

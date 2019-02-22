@@ -1,0 +1,14 @@
+@startuml
+salt
+{
+  001 | <b>How much cash do you want?
+  |.
+  002 | Quick choose:
+  003 | {
+          {+ $ 10} |.| {+ $   50}
+          {+ $ 20} |.|  {+ $ 100}
+        }
+  |.
+  004 | [Custom choose]
+}
+@enduml

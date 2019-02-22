@@ -1,0 +1,11 @@
+@startuml
+salt
+{
+  001 | <b>What do you want to do?
+  .
+  002 | [ Pick the cash]
+  003 | [ Check balance]
+  .
+  004 | [Eject the card]
+}
+@enduml

@@ -1,0 +1,43 @@
+@startuml
+salt
+{
+  001 | <b>Welcome to Micro-bank
+  . | .
+  002 | Bank accounts offer:
+  003 | {
+          {+
+            <b> Account var#1
+            Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit.
+            Curabitur sagittis hendrerit
+            ante. Lorem ipsum dolor sit
+            amet, consectetuer adipiscing
+            elit. Integer imperdiet lectus
+            quis justo.
+            [Select this variant]
+          } {.} |
+          {+
+            <b> Account var#2
+            Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit.
+            Curabitur sagittis hendrerit
+            ante. Lorem ipsum dolor sit
+            amet, consectetuer adipiscing
+            elit. Integer imperdiet lectus
+            quis justo.
+            [Select this variant]
+          } | {.} |
+          {+
+            <b> Account var#3
+            Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit.
+            Curabitur sagittis hendrerit
+            ante. Lorem ipsum dolor sit
+            amet, consectetuer adipiscing
+            elit. Integer imperdiet lectus
+            quis justo.
+            [Select this variant]
+          }
+        }
+}
+@enduml

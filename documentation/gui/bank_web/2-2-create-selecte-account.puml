@@ -1,0 +1,14 @@
+@startuml
+salt
+{
+  001 | <b> Account var#1
+  .
+  002 | Fill in and submit the form to create your account:
+  .
+  003 | "First name    "
+  004 | "Last name     "
+  005 | "Birth code    "
+  005 | "Address       "
+  006 | [Create account]
+}
+@enduml

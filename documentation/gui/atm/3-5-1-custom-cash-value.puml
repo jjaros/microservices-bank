@@ -1,0 +1,12 @@
+@startuml
+salt
+{
+  001 | How much cash do you want?
+  |.
+  002/003 | {
+              Enter the amount: |.| " 1,000.55 "
+            }
+  |.
+  003 | [Pick the cash]
+}
+@enduml

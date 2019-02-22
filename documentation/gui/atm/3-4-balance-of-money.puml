@@ -1,0 +1,8 @@
+@startuml
+salt
+{
+  001 | <b>Balance of money on your bank account is:
+  002 | $1,234.56
+  003 | [Back to menu]
+}
+@enduml

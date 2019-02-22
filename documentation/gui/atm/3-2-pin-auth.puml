@@ -1,0 +1,11 @@
+@startuml
+salt
+{
+  001 | <b>PIN authentication
+  .
+  002 | Please, Enter the PIN code
+  003 | "PIN code        "
+  .
+  005 | {[    Ok ] | [ Storno]}
+}
+@enduml

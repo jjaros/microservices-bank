@@ -1,0 +1,32 @@
+@startuml
+salt
+{
+  001 | <b>User signpost - <username>
+
+  002/003 | {[Bank web] | create bank account here}
+  004/005 | {[Visit ATM] | perform actions with your card}
+
+  --|--
+
+  006 | <b>Your bank accounts:
+  007 | {
+          {+
+            <b>Account_2
+            Personal account
+            ==
+            {<b>card: | 123456789/1234}
+            {<b>expiration: | dd.mm.yyyy}
+          } | {  . } |
+          {+
+            <b>Account_2
+            Personal account
+            ==
+            {<b>You don't have
+            <b>receive your card yet...}
+          }
+        }
+  . | .
+  008 | {+<b> You have no bank account}
+}
+
+@enduml

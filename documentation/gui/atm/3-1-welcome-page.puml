@@ -1,0 +1,9 @@
+@startuml
+salt
+{
+  001 | <b>Welcome to ATM!
+  002 | Please insert your card...
+  .
+  003 | ^Select the card^
+}
+@enduml
