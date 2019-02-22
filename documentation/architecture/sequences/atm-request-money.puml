@@ -1,0 +1,13 @@
+@startuml
+
+title ATM asks the bank\nto replenish the stock of money
+
+ATM -> Bank: <async> request money
+ATM -> ATM: lock requests
+Bank -> Bank: plan delivery
+...
+ATM <- Bank: <async> delivery money
+ATM <- ATM: update money
+ATM -> ATM: unlock requests
+
+@enduml

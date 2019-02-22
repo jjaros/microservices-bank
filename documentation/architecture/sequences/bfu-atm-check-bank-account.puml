@@ -1,0 +1,21 @@
+@startuml
+
+title User check state of his bank account in ATM
+actor User
+
+!include common/bfu-atm-auth.puml
+show footbox
+
+== Check bank account ==
+User -> ATM: check bank account state
+ATM -> Bank: request bank account detail
+ATM <- Bank: get bank account detail
+User <- ATM: get current amount
+|||
+|||
+ref over User, ATM: pick the cash from ATM
+|||
+User -> ATM: end transaction
+User <- ATM: eject the card
+
+@enduml

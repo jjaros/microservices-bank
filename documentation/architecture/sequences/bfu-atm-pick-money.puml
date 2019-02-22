@@ -1,0 +1,30 @@
+@startuml
+
+title User picks the cash from ATM
+actor User
+
+!include common/bfu-atm-auth.puml
+show footbox
+
+== Pick the money ==
+User -> ATM: enter PIN
+ATM -> Bank: card authentication
+ATM <- Bank: ok
+User <- ATM: ok
+
+User -> ATM: request money
+ATM -> ATM: check stock of money
+User <[#red]-- ATM: too few money (in ATM)
+
+ATM -> Bank: check bank account
+ATM <[#red]-- Bank: too few money (bank account)
+User <[#red]-- ATM: too few money (bank account)
+
+Bank -> Bank: update bank account
+ATM <[#green]- Bank: ACK - Ok
+ATM <- ATM: update & check stock of money
+ATM --> Bank: <async> request money
+User <[#green]- ATM: get money & eject the card
+User <- User: put money to wallet
+
+@enduml

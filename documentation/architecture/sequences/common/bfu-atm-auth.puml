@@ -1,0 +1,16 @@
+@startuml
+
+actor User
+hide footbox
+
+== Initialization ==
+User -> ATM: visit & put the card
+User <- ATM: request PIN
+
+== Invalid PIN ==
+User -> ATM: enter PIN
+ATM -> Bank: card authentication
+ATM <- Bank: access denied
+User <- ATM: access denied
+
+@enduml

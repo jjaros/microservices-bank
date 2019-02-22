@@ -1,0 +1,32 @@
+@startuml
+
+title User creates new bank account
+actor User
+
+== Initialization ==
+User -> "Bank web": visit page
+User <- "Bank web": get page
+
+User -> User: fill form data
+
+== invalid request ==
+User -> "Bank web": POST form
+User <- "Bank web": not valid
+
+== Create account ==
+User -> "Bank web": POST form
+"Bank web" -> Bank: create bank account
+
+Bank -> Bank: create user account
+Bank -> Bank: create bank account
+Bank -> Bank: <async> request new card
+
+"Bank web" <- Bank: ok: created
+User <- "Bank web": ok: created
+
+== Create & send card ==
+...
+Bank -> Bank: create new card
+User <- Bank: <async> card delivery
+
+@enduml

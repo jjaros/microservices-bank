@@ -1,0 +1,46 @@
+@startuml
+
+skinparam packageStyle rectangle
+
+actor User
+
+rectangle "Microservices Bank - Docker platform" {
+  (User signpost) <<www>> as (us)
+  (Bank web) <<www>> as (bw)
+  (Bank Institute) <<API>> as (b)
+  (ATM) <<www>> as (atm)
+
+  us <.. User
+
+  bw <-- us : create account
+  b <-- bw: create user\n+ bank account
+  b <-- b: create new card
+
+  b --> us: <async>\nsend new card
+
+  us -up-> atm: pick/check\nmoney
+  b --> atm: <async>\nmoney delivery
+  b <-- atm: <async>\nrequest money
+  b <-- atm: get\naccount
+  b <-- atm: auth
+
+  note left of (b)
+    - only BE API
+  end note
+
+  note left of (atm)
+    - FE: Angular app
+    - BE: Spring - REST API
+  end note
+
+  note left of (bw)
+    - Spring MVC + Thymeleaf
+  end note
+
+  note left of (us)
+    - basic web page
+    - provides possible user actions
+  end note
+}
+
+@enduml
