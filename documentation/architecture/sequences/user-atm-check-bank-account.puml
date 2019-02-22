@@ -3,7 +3,7 @@
 title User check state of his bank account in ATM
 actor User
 
-!include common/bfu-atm-auth.puml
+!include common/user-atm-auth.puml
 show footbox
 
 == Check bank account ==

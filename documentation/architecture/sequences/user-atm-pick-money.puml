@@ -3,7 +3,7 @@
 title User picks the cash from ATM
 actor User
 
-!include common/bfu-atm-auth.puml
+!include common/user-atm-auth.puml
 show footbox
 
 == Pick the money ==
