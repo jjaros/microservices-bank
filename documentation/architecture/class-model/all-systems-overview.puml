@@ -1,0 +1,57 @@
+@startuml
+
+package "Bank Institute" <<Rectangle>> {
+  class "UserAccount" as user {
+    first_name: String
+    last_name: String
+  }
+
+  class "Address" as address {
+    city: String
+    street: String
+    buildingNo: String
+    postCode: String
+  }
+
+  class "BankAccount" as b_account {
+    accountNumber: String
+    amount: number
+    productCode: String
+    customName: String
+  }
+
+  class "DebitCard" as card {
+    cardNumber: number
+    expiration: Date
+    pin: String
+  }
+
+  user "1..n" -- "1" address
+  user "1" -- "0..n" b_account
+  b_account "1" -- "0..1" card
+}
+
+
+package ATM <<Rectangle>> {
+  class "ATM" as atm {
+    moneyAmount: number
+  }
+}
+
+package "Bank web" <<Rectangle>> {
+  class "BankAccountProduct" as product {
+    productCode: String
+    productName: String
+    defaultDuration: number
+  }
+}
+
+package "User signpost" <<Rectangle>> {
+  class "Wallet" as wallet {
+    amount: number
+  }
+}
+
+"Bank web" -[hidden]- "User signpost"
+"Bank web" -[hidden]- ATM
+@enduml
