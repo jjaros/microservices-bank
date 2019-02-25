@@ -2,14 +2,14 @@
 salt
 {
   001 | <b>User signpost - <username>
+  002 | {You have <b>$1,234.45 | in your wallet.}
+  003/004 | {[Bank web] | create bank account here}
+  005/006 | {[Visit ATM] | perform actions with your card}
 
-  002/003 | {[Bank web] | create bank account here}
-  004/005 | {[Visit ATM] | perform actions with your card}
+  .|--
 
-  --|--
-
-  006 | <b>Your bank accounts:
-  007 | {
+  007 | <b>Your bank accounts:
+  008 | {
           {+
             <b>Account_2
             Personal account
@@ -26,7 +26,7 @@ salt
           }
         }
   . | .
-  008 | {+<b> You have no bank account}
+  009 | {+<b> You have no bank account}
 }
 
 @enduml

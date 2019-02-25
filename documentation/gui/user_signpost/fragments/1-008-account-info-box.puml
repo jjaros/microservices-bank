@@ -1,0 +1,12 @@
+@startuml
+salt
+{
+  008a | <b>Account_1
+  008b | Personal account
+  .|==
+  008c | {<b>card: | 123456789/1234}
+  008d | {<b>expiration: | dd.mm.yyyy}
+  .
+  008e | {<b>You don't receive your card yet...}
+}
+@enduml
